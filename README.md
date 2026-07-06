@@ -48,9 +48,9 @@ tree.
 Milestone 1 of the `kami-engine-sdk` Svelte→CLJS migration (ADR-2607052000): the
 `webvr` module, fully ported (not the incremental "delegate one function, keep the TS
 host" shape genko used — `webvr` has no live embedded-HTML host to preserve
-compatibility with, so a full-module port was the right increment size here). Consumer
-migration (`ai-gftd-cyber-drill`'s own Svelte-side wiring) is explicit follow-up, out of
-scope for this repo.
+compatibility with, so a full-module port was the right increment size here).
+`ai-gftd-cyber-drill` (the module's original TS-side consumer) is out of scope entirely
+— not a pending follow-up, not migrated, not planned to be.
 
 ## License
 

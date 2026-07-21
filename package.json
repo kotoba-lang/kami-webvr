@@ -2,6 +2,9 @@
   "name": "kami-webvr",
   "private": true,
   "description": "Choice-based scenario engine (kami-engine-sdk's webvr module, ported to CLJC/CLJS).",
+  "scripts": {
+    "test": "clojure -M:test"
+  },
   "devDependencies": {
     "shadow-cljs": "^3.4.11"
   }

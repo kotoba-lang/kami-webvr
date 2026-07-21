@@ -1,4 +1,0 @@
-{:paths ["test" "src"]
- :tasks
- {test {:doc  "JVM tests for the pure choice-scenario engine (types + incident-pregel)."
-        :task (clojure "-M:test")}}}

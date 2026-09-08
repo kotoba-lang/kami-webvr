@@ -10,7 +10,7 @@
    any network -- same injectable-fetch pattern this org already uses for
    testability elsewhere (e.g. kotoba.turn.credential's reader-conditional
    split)."
-  (:require [clojure.string :as str]))
+  (:require [kotoba.lang.text :as str]))
 
 ;; --- pure helpers -------------------------------------------------------
 

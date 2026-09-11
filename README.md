@@ -15,17 +15,17 @@ pipeline (or a deterministic offline mock).
 
 ## Layout
 
-- `src/kami/webvr/types.cljc` — `IncidentKpi`/`IncidentChoice`/`IncidentNode`/
+- `src/kami/webvr/types.cljk` — `IncidentKpi`/`IncidentChoice`/`IncidentNode`/
   `IncidentScenario`/`IncidentState` shapes (plain EDN maps) + `apply-kpi-delta`.
-- `src/kami/webvr/incident_pregel.cljc` — `initial-state`/`apply-selection`, the pure
+- `src/kami/webvr/incident_pregel.cljk` — `initial-state`/`apply-selection`, the pure
   state machine actually exercised at runtime. The original TS's compiled LangGraph
   `StateGraph` (8 super-steps mirroring this logic, for LangGraph-Studio parity) was
   **not** ported — it was documentation scaffolding never `.invoke()`d by the real engine
   and not covered by any test; see the file's own doc-comment.
-- `src/kami/webvr/engine.cljs` — `create-incident-vr-engine`: an atom-backed reactive
+- `src/kami/webvr/engine.cljk` — `create-incident-vr-engine`: an atom-backed reactive
   wrapper (Svelte 5 runes → atom) with `publish!`/`select!`/`reset!` and the exact
   1-to-3-calls-per-publish `on-scene` cascade timing preserved from the original.
-- `src/kami/webvr/cine_bridge.cljs` — `create-cine-bridge`/`create-mock-cine-bridge`:
+- `src/kami/webvr/cine_bridge.cljk` — `create-cine-bridge`/`create-mock-cine-bridge`:
   live pod HTTP client + deterministic offline mock (prompt-hash-seeded, regex-derived
   camera hint/mood palette), fetch injectable for testability.
 

@@ -23,7 +23,7 @@ and its follow-up increment ADR. This file is a local pointer.
   ceremony a live-embed rewrite needs.
 - **cljc for pure logic, cljs for the reactive/network layer** — same split
   `net-babiniku`'s `governor.cljc` + `web.cljs` already established: `types.cljc` +
-  `incident_pregel.cljc` are 100% pure (JVM-testable via `bb test`, no browser); `engine.cljs`
+  `incident_pregel.cljc` are 100% pure (JVM-testable via `kbb -M:test`, no browser); `engine.cljs`
   (Svelte runes → atom) and `cine_bridge.cljs` (fetch/canvas) need a JS host, tested via
   shadow-cljs `:node-test`.
 - **The compiled `INCIDENT_GRAPH` LangGraph `StateGraph` was not ported.** Confirmed via
@@ -35,7 +35,7 @@ and its follow-up increment ADR. This file is a local pointer.
 
 ## Consequences
 
-- 20/20 tests green (9 JVM `bb test` + 11 CLJS `node-test`), 1:1 against the original
+- 20/20 tests green (9 JVM `kbb -M:test` + 11 CLJS `node-test`), 1:1 against the original
   `webvr.test.ts`/`cine-bridge.test.ts` assertions, plus 4 new engine-cascade tests.
 - Consumer migration (wiring `ai-gftd-cyber-drill`'s Svelte side to this instead of
   `kami-engine-sdk`'s `./webvr` export) is explicit follow-up, not this repo's scope.

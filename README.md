@@ -34,7 +34,7 @@ pipeline (or a deterministic offline mock).
 ```bash
 npm test                           # pure .cljc (types + incident-pregel), JVM, 9 tests
 npm install
-npx shadow-cljs compile node-test  # cine-bridge + engine, node, 11 tests
+amu compile --target wasm32-browser node-test  # cine-bridge + engine, node, 11 tests
 node out/kami-webvr-tests.js
 ```
 

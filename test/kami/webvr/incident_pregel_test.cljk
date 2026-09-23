@@ -1,6 +1,6 @@
 (ns kami.webvr.incident-pregel-test
   "Ported 1:1 from kami-engine-sdk's src/lib/webvr/webvr.test.ts (9 assertions)."
-  (:require [clojure.test :refer [deftest is testing]]
+  (:require [kotoba.test :refer [deftest is testing]]
             [kami.webvr.types :as t]
             [kami.webvr.incident-pregel :as p]))
 

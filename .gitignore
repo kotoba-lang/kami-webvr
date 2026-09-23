@@ -4,3 +4,4 @@
 /.cpcache/
 .DS_Store
 package-lock.json
+.nbb/
